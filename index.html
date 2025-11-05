@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Personajes - Los Simpsons</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Galería de Personajes de Los Simpsons</h1>
+            <p class="subtitle">Descubre personajes aleatorios de Springfield</p>
+        </header>
+
+        <!-- Filtro de búsqueda (Bonus) -->
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="filtro" 
+                placeholder="Buscar personaje por nombre..."
+                class="search-input"
+            >
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="loader oculto">
+            <div class="spinner"></div>
+            <p>Cargando personajes...</p>
+        </div>
+
+        <!-- Mensaje de error -->
+        <div id="error" class="error oculto"></div>
+
+        <!-- Galería de personajes -->
+        <div id="galeria" class="galeria"></div>
+
+        <!-- Botón para cargar nuevos personajes -->
+        <div class="button-container">
+            <button id="cargar" class="btn-cargar">
+                🔄 Cargar Nuevos Personajes
+            </button>
+        </div>
+
+        <!-- Sección de favoritos (Bonus) -->
+        <section class="favoritos-section">
+            <h2>Personajes Favoritos</h2>
+            <div id="favoritos" class="galeria"></div>
+            <button id="limpiar-favoritos" class="btn-secondary oculto">
+                🗑️ Limpiar Favoritos
+            </button>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
